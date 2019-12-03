@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+#include "keywords.h"//꺽새는 라이브러리고 내가만든 헤더는 큰따옴표 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 int is_whitespace(char c)
 {
@@ -72,8 +72,11 @@ int main(int argc, char *argv[]) {
 	//word
 	while(fget_word(fp,word)!=0)
 	{
-		printf("%s\n",word);
+		count_word(word);
 	}
+	//output
+	print_word();
+	
 	fclose(fp);
 	
 }
